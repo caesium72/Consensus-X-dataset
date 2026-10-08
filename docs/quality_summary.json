@@ -1,0 +1,23 @@
+{
+  "rows": 5000,
+  "fields": 68,
+  "missing_cells": 70,
+  "train": 3500,
+  "validation": 748,
+  "test": 752,
+  "domains": {
+    "Healthcare": 1250,
+    "Retail": 1250,
+    "Payroll": 1250,
+    "Supply Chain": 1250
+  },
+  "external_observation_records": 33,
+  "provenance_field_classes": {
+    "source_derived/synthetic_scenario": 26,
+    "synthetic_scenario": 15,
+    "evaluation_metric/synthetic_scenario": 10,
+    "external_observed/source_derived": 7,
+    "synthetic_scenario/evaluation_metric": 6,
+    "source_derived": 4
+  }
+}

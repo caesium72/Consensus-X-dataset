@@ -1,0 +1,19 @@
+source_id,source_name,scope,provenance_type,source_url,source_class
+SRC-001,NSIO paper (user-provided),"Paper schema, NSIO phases, utility function, four domains",user-provided,Pasted text.txt,internal
+SRC-002,Etherscan Ethereum Gas Tracker,"Observed Ethereum gas price, block, queue, utilization",external_observed,https://etherscan.io/gastracker/,public web
+SRC-003,CoinGecko Ethereum,Observed ETH/USD price and market statistics,external_observed,https://www.coingecko.com/en/coins/ethereum/,public web
+SRC-004,CoinGecko Solana,Observed SOL/USD price and market statistics,external_observed,https://www.coingecko.com/en/coins/solana/,public web
+SRC-005,DeFiLlama Chain Rankings,"Observed Ethereum/Solana TVL, DEX volume, fees, active addresses",external_observed,https://defillama.com/chains,public web
+SRC-006,PolygonScan Gas Tracker,"Observed Polygon gas, base/priority fee and confirmation estimates",external_observed,https://polygonscan.com/gastracker/,public web
+SRC-007,Solana Documentation — Fees,Documented Solana base fee and priority-fee formulas,source_derived,https://solana.com/docs/core/fees,official documentation
+SRC-008,Ethereum.org — Proof of Stake,"Documented Ethereum PoS, 12-second slots and validator requirements",source_derived,https://ethereum.org/developers/docs/consensus-mechanisms/pos/,official documentation
+SRC-009,Stripe Pricing,Documented standard domestic-card pricing,external_observed,https://stripe.com/pricing,official pricing
+SRC-010,Hyperledger Fabric Ordering Service,"Documented Fabric ordering, Raft/BFT and deterministic finality",source_derived,https://hyperledger-fabric.readthedocs.io/en/latest/orderer/ordering_service.html,official documentation
+SRC-011,Hyperledger Fabric v3.0,Documented SmartBFT BFT ordering service,source_derived,https://hyperledger-fabric.readthedocs.io/en/latest/whatsnew.html,official documentation
+SRC-012,Hyperledger Besu QBFT,"Documented QBFT, >=2/3 signatures, four-validator BFT minimum",source_derived,https://github.com/besu-eth/besu-docs/blob/main/docs/private-networks/how-to/configure/consensus/qbft.md,official documentation
+SRC-013,XRP Ledger Consensus,Documented XRP Ledger consensus properties,source_derived,https://xrpl.org/docs/concepts/consensus-protocol,official documentation
+SRC-014,Stellar Consensus Protocol,Documented Stellar SCP/FBA and quorum concepts,source_derived,https://developers.stellar.org/docs/learn/fundamentals/stellar-consensus-protocol,official documentation
+SRC-015,World Bank Remittance Prices Worldwide,Real remittance pricing dataset and download/licensing information,external_observed,https://remittanceprices.worldbank.org/data-download,public dataset
+SRC-016,World Bank RPW Data Catalog,"Coverage, temporal coverage and CC BY 4.0 metadata",source_derived,https://datacatalog.worldbank.org/search/dataset/0037898/remittance-prices-worldwide,public dataset metadata
+SRC-017,CoinGecko API documentation,API/update-frequency documentation,source_derived,https://docs.coingecko.com/,official API documentation
+SRC-018,PolygonScan Gas API documentation,Gas Oracle fields and gas-utilization concepts,source_derived,https://docs.polygonscan.com/api-endpoints/gas-tracker,official API documentation

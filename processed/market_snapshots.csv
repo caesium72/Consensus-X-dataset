@@ -1,0 +1,5 @@
+snapshot_id,rail,native_asset_price_usd,gas_price_gwei,example_transfer_fee_usd,tvl_usd,chain_fees_24h_usd,active_addresses_24h,dex_volume_24h_usd,source_ids
+MS-001,Ethereum,2657.51,0.114,0.006362078940000002,49265000000.0,344737.0,601507.0,1357000000.0,SRC-002;SRC-003;SRC-005
+MS-002,Solana,120.25,,0.00060125,5777000000.0,978477.0,2470000.0,3000000000.0,SRC-004;SRC-005;SRC-007
+MS-003,Polygon,,281.048,0.001,,,,,SRC-006
+MS-004,Stripe,,,,,,,,SRC-009

@@ -1,0 +1,7 @@
+rail,rail_class,consensus_or_mechanism,source_ids,privacy_capability,decentralization,documented_latency_or_finality,data_mode
+Ethereum,public,PoS/Gasper,SRC-008,high,public,12-second slots; PoS finality,real_market
+Polygon,public,Polygon PoS,SRC-006,high,public,~16 sec standard estimate in captured snapshot,real_market
+Solana,public,PoS/PoH architecture,SRC-007,high,public,base + optional priority fee,real_market
+Hyperledger Fabric,permissioned,Raft/SmartBFT,SRC-010;SRC-011,very_high,permissioned,deterministic ordering/finality,modeled_local
+Hyperledger Besu,permissioned,QBFT PoA,SRC-012,very_high,permissioned,>=2/3 signatures; >=4 validators for BFT,modeled_local
+Stripe,fintech,payment processor,SRC-009,high,centralized,2.9% + $0.30 standard domestic card pricing,real_pricing

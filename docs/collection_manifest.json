@@ -1,0 +1,121 @@
+{
+  "dataset_version": "NSIO-Benchmark-v2.0",
+  "build_date": "2026-09-30",
+  "rows": 5000,
+  "fields": 68,
+  "paper_schema": "Nine categories: 6 + 9 + 8 + 7 + 4 + 10 + 8 + 6 + 10 = 68.",
+  "source_map": [
+    {
+      "source_id": "SRC-002",
+      "url": "https://etherscan.io/gastracker/",
+      "observations": [
+        "ethereum gas price",
+        "last block",
+        "pending queue",
+        "utilization"
+      ]
+    },
+    {
+      "source_id": "SRC-003",
+      "url": "https://www.coingecko.com/en/coins/ethereum/",
+      "observations": [
+        "ETH/USD",
+        "ETH market cap",
+        "ETH 24h volume"
+      ]
+    },
+    {
+      "source_id": "SRC-004",
+      "url": "https://www.coingecko.com/en/coins/solana/",
+      "observations": [
+        "SOL/USD",
+        "SOL market cap",
+        "SOL 24h volume"
+      ]
+    },
+    {
+      "source_id": "SRC-005",
+      "url": "https://defillama.com/chains",
+      "observations": [
+        "Ethereum/Solana TVL",
+        "DEX volume",
+        "chain fees",
+        "active addresses"
+      ]
+    },
+    {
+      "source_id": "SRC-006",
+      "url": "https://polygonscan.com/gastracker/",
+      "observations": [
+        "Polygon gas",
+        "base/priority gas",
+        "confirmation estimate",
+        "example fee"
+      ]
+    },
+    {
+      "source_id": "SRC-007",
+      "url": "https://solana.com/docs/core/fees",
+      "observations": [
+        "5,000 lamport base fee",
+        "priority-fee formula"
+      ]
+    },
+    {
+      "source_id": "SRC-008",
+      "url": "https://ethereum.org/developers/docs/consensus-mechanisms/pos/",
+      "observations": [
+        "PoS",
+        "12-second slots",
+        "32 ETH validator deposit"
+      ]
+    },
+    {
+      "source_id": "SRC-009",
+      "url": "https://stripe.com/pricing",
+      "observations": [
+        "2.9% + $0.30 standard domestic-card pricing"
+      ]
+    },
+    {
+      "source_id": "SRC-010",
+      "url": "https://hyperledger-fabric.readthedocs.io/en/latest/orderer/ordering_service.html",
+      "observations": [
+        "Fabric ordering",
+        "Raft/BFT",
+        "deterministic finality"
+      ]
+    },
+    {
+      "source_id": "SRC-011",
+      "url": "https://hyperledger-fabric.readthedocs.io/en/latest/whatsnew.html",
+      "observations": [
+        "Fabric v3.0 SmartBFT"
+      ]
+    },
+    {
+      "source_id": "SRC-012",
+      "url": "https://github.com/besu-eth/besu-docs/blob/main/docs/private-networks/how-to/configure/consensus/qbft.md",
+      "observations": [
+        "QBFT",
+        "2/3 signatures",
+        "four validators"
+      ]
+    },
+    {
+      "source_id": "SRC-015",
+      "url": "https://remittanceprices.worldbank.org/data-download",
+      "observations": [
+        "RPW availability",
+        "2011\u2013Q1 2025 coverage in download page",
+        "attribution/license"
+      ]
+    }
+  ],
+  "synthetic_rules": {
+    "kyc_required": "amount > $10,000; study-defined scenario rule only",
+    "local_rail_costs": "Fabric/Besu costs are modeled assumptions, not scraped market prices",
+    "transaction_rows": "controlled synthetic scenarios",
+    "shap_fields": "benchmark proxy values; replace with actual SHAP after training"
+  }
+}
