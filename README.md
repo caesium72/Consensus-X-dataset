@@ -1,4 +1,4 @@
-# NSIO-Benchmark — Provenance-Aware Hybrid Benchmark
+# NSIO-Benchmark: A Provenance-Aware Hybrid Benchmark for Context-Aware Blockchain Consensus and Payment-Rail Selection
 
 **Current Zenodo record:** Version 1.0, DOI `10.5281/zenodo.23239670`  
 **Corrected archive:** prepared locally for the next Zenodo upload; not yet part of the existing Version 1.0 record  
