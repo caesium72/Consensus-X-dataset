@@ -7,7 +7,7 @@ SRC-005,DeFiLlama Chain Rankings,"Observed Ethereum/Solana TVL, DEX volume, fees
 SRC-006,PolygonScan Gas Tracker,"Observed Polygon gas, base/priority fee and confirmation estimates",external_observed,https://polygonscan.com/gastracker/,public web
 SRC-007,Solana Documentation — Fees,Documented Solana base fee and priority-fee formulas,source_derived,https://solana.com/docs/core/fees,official documentation
 SRC-008,Ethereum.org — Proof of Stake,"Documented Ethereum PoS, 12-second slots and validator requirements",source_derived,https://ethereum.org/developers/docs/consensus-mechanisms/pos/,official documentation
-SRC-009,Stripe Pricing,Documented standard domestic-card pricing,external_observed,https://stripe.com/pricing,official pricing
+SRC-009,Stripe Pricing,Published standard domestic-card pricing parameter; not transaction-level observed fees,source_derived,https://stripe.com/pricing,official pricing schedule
 SRC-010,Hyperledger Fabric Ordering Service,"Documented Fabric ordering, Raft/BFT and deterministic finality",source_derived,https://hyperledger-fabric.readthedocs.io/en/latest/orderer/ordering_service.html,official documentation
 SRC-011,Hyperledger Fabric v3.0,Documented SmartBFT BFT ordering service,source_derived,https://hyperledger-fabric.readthedocs.io/en/latest/whatsnew.html,official documentation
 SRC-012,Hyperledger Besu QBFT,"Documented QBFT, >=2/3 signatures, four-validator BFT minimum",source_derived,https://github.com/besu-eth/besu-docs/blob/main/docs/private-networks/how-to/configure/consensus/qbft.md,official documentation
