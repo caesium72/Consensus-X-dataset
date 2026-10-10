@@ -1,69 +1,54 @@
-# NSIO-Benchmark v2.0 — Provenance-Backed Hybrid Benchmark
+# NSIO-Benchmark — Dataset Card (Prepared Release)
 
-**Build date:** 2026-09-30  
-**Rows:** 5,000  
-**Schema:** 68 fields, matching the nine category counts in the NSIO manuscript.
+## Summary
 
-## 1. What was taken from where?
+- **Release state:** corrected ZIP prepared locally; not yet deposited on Zenodo.
+- **Current Zenodo record:** Version 1.0, DOI [10.5281/zenodo.23239670](https://doi.org/10.5281/zenodo.23239670). This DOI does not identify the corrected prepared archive.
+- **Prepared benchmark:** 5,000 controlled synthetic transaction scenarios.
+- **Schema:** 68 fields in nine categories; the consolidated CSV has 69 columns including the `split` indicator.
+- **Domains:** Healthcare, Retail, Payroll and Supply Chain, 1,250 scenarios each.
+- **Settlement rails:** Ethereum, Polygon, Solana, Hyperledger Fabric, Hyperledger Besu and Stripe.
+- **Evidence ledger:** 33 shared evidence records—23 external observations, eight source-derived parameters and two public-dataset metadata records.
 
-### Real/external observations
+## Intended use
 
-| Dataset field / observation | Source | What was captured |
-|---|---|---|
-| `eth_gas_gwei` | Etherscan Gas Tracker | 0.114 Gwei in the captured page result |
-| ETH price | CoinGecko Ethereum | $2,657.51 |
-| SOL price | CoinGecko Solana | $120.25 |
-| Ethereum/Solana TVL | DeFiLlama | $49.265B / $5.777B |
-| Ethereum/Solana chain fees | DeFiLlama | $344,737 / $978,477 per 24h in captured snapshot |
-| Ethereum/Solana DEX volume | DeFiLlama | $1.357B / $3.0B per 24h |
-| Ethereum/Solana active addresses | DeFiLlama | 601,507 / 2.47M |
-| Polygon gas | PolygonScan | 281.048 Gwei standard |
-| Polygon confirmation | PolygonScan | ~16 s standard estimate |
-| Polygon ERC-20 example fee | PolygonScan | $0.001 |
-| Stripe domestic card pricing | Stripe | 2.9% + $0.30 |
-| Solana base fee | Solana docs | 5,000 lamports/signature |
-| Ethereum slot time | Ethereum docs | 12 s |
-| Ethereum validator deposit | Ethereum docs | 32 ETH |
-| Besu QBFT | Besu docs | >=2/3 signatures; 4 validators for BFT |
+Suitable for schema validation, provenance-aware data integration, controlled feasibility/routing experiments, utility-sensitivity analysis, deterministic pipeline regression tests and research on data lineage.
 
-## 2. What is synthetic?
+## Not intended for
 
-The 5,000 transaction rows are **controlled synthetic scenarios**, not real payment records.
+The benchmark is not a source of historical payment events, observed user preferences, population-level transaction distributions, legal-compliance determinations or validated production-routing performance. Selected-rail labels are deterministic outputs of the documented rules, not independent gold-standard annotations. The current release does not report supervised model training.
 
-Synthetic fields include transaction amount, country pair, domain, urgency, privacy class, intent, modality, perception outputs and scenario labels.
+## Data provenance
 
-The real external observations are injected as market/environment anchors.
+### External observations
 
-## 3. What is derived?
+The ledger contains public network and market snapshots from Etherscan, CoinGecko, DeFiLlama and PolygonScan. They are shared observations, not transaction-level measurements collected separately for each scenario.
 
-Examples:
-- ETH transfer fee = observed gas price × 21,000 gas × observed ETH/USD.
-- Solana base fee USD = 5,000 lamports × observed SOL/USD.
-- Utility scores = NSIO paper utility equation.
-- CAS = NSIO paper cosine-similarity definition.
-- RFS = NSIO paper definition.
-- Consensus/capability labels = derived from official documentation.
+### Source-derived parameters
 
-## 4. Critical legal/compliance note
+Technical capabilities come from official Ethereum, Solana, Hyperledger Fabric and Hyperledger Besu documentation. Stripe's published domestic-card pricing is a source-derived pricing parameter, not a fee observed on a benchmark transaction. Fabric and Besu fee, latency and throughput estimates are modeled parameters rather than deployment measurements.
 
-The manuscript contains an amount > $10,000 KYC condition. This benchmark preserves that condition as a **study-defined synthetic rule** only. It is not represented as a universal legal/FATF requirement.
+### World Bank RPW
 
-## 5. Important limitation
+The two Remittance Prices Worldwide (RPW) entries document catalog temporal coverage through 2025 Q1 and a catalog-reported count of 377 corridors at the recorded retrieval. They do not contain provider-level quotes, transaction-level remittance prices or actual remittance transactions. They must be treated as catalog metadata only.
 
-This release is a **provenance-backed hybrid benchmark**, not a complete historical scrape of every provider. The web environment allowed direct inspection of public pages and current source observations, but some API/download endpoints require API credentials or an interactive download form. Those limitations are recorded in `docs/collection_manifest.json`.
+### Controlled scenarios and derived outputs
 
-## 6. Files
+All 5,000 rows are controlled synthetic configurations. Amounts, country pairs, domain, urgency, privacy, asset, intent, modality and perception-like attributes do not identify real users or represent executed payments. Feasibility flags, utility values, selected-rail labels, modeled settlement estimates and baseline deltas are rule-derived. The USD 10,000 KYC condition is a study-defined synthetic rule, not a universal legal or FATF threshold. SHAP-named fields are proxy/reserved values, not empirical SHAP attributions produced by a trained model.
 
-- `processed/nsio_benchmark_5000.csv` — full 68-field benchmark.
-- `processed/train.csv` — training split.
-- `processed/validation.csv` — validation split.
-- `processed/test.csv` — test split.
-- `raw_external/source_observations.csv` — external observations captured during this build.
-- `processed/market_snapshots.csv` — normalized market layer.
-- `processed/rail_capabilities.csv` — documented capability layer.
-- `data_dictionary.csv` — field definitions and provenance.
-- `provenance.csv` — field-level provenance mapping.
-- `source_registry.csv` — source/citation registry.
-- `references/references.bib` — BibTeX.
-- `docs/collection_manifest.json` — source-to-field mapping.
-- `docs/quality_summary.json` — QA summary.
+## Splits and quality
+
+- Train: 3,500 rows.
+- Validation: 748 rows.
+- Test: 752 rows.
+- The original split seed, stratification method and grouping/dependency controls are undocumented; statistically independent or leakage-free partitions are not claimed.
+- Consolidated CSV: 5,000 rows and 69 columns (68 schema fields plus `split`); no duplicate rows in the audited prepared build.
+- 5,063 missing cells: 4,993 expected empty `rejection_reason` cells in non-rejected rows and 70 derived-field nulls across the seven rejected rows.
+
+## Code and reproducibility
+
+The original executable used to create the existing CSV rows was not recovered. The GitHub `generate_dataset.py` is an independently authored reconstruction based on documented assumptions; it does not claim to regenerate the current CSV byte-for-byte or row-for-row. The immutable source is [commit 5ecb791](https://github.com/caesium72/Consensus-X-dataset/blob/5ecb791dea05558741f96a4e46c2043fb8729aba/generate_dataset.py).
+
+## Licence and citation
+
+No reuse licence has yet been selected. Do not treat this prepared archive as a finalized public release until a licence decision and third-party terms review are complete. Once this archive is deposited on Zenodo, cite its specific version DOI; do not cite the current Version 1.0 DOI as though it refers to the prepared archive.
