@@ -1,0 +1,79 @@
+{
+  "manifest_version": 1,
+  "dataset_version": "NSIO-Benchmark-v2.0-workspace-copy",
+  "scope": "Integrity inventory for the inspected workspace package; not authenticated against the Zenodo ZIP and not a row-generation recipe.",
+  "files": {
+    "NSIO-Benchmark-v2.0.xlsx": {
+      "size_bytes": 443520,
+      "sha256": "69cd5ff0caa65ec62779cc9135fc59477cb8c1fb757998ddd711e80b567bcc2b"
+    },
+    "README.md": {
+      "size_bytes": 4806,
+      "sha256": "2c92085270daa91ebf985cd49b69b5d899982c4721196a8d4c41081a6597397a"
+    },
+    "data_dictionary.csv": {
+      "size_bytes": 15362,
+      "sha256": "de0fdadc4fb49d03b1bd11fa4616700fdcf881fc817d8bca7feda5af9678f209"
+    },
+    "docs/collection_manifest.json": {
+      "size_bytes": 3195,
+      "sha256": "770b3d21514a4cf2f87705adb1288b14eb5a482afb5277b2f8deee76c5fe1ae4"
+    },
+    "docs/data_dictionary.csv": {
+      "size_bytes": 15362,
+      "sha256": "de0fdadc4fb49d03b1bd11fa4616700fdcf881fc817d8bca7feda5af9678f209"
+    },
+    "docs/dataset_card.md": {
+      "size_bytes": 4806,
+      "sha256": "2c92085270daa91ebf985cd49b69b5d899982c4721196a8d4c41081a6597397a"
+    },
+    "docs/quality_summary.json": {
+      "size_bytes": 532,
+      "sha256": "640d8db6712c2898b4bac6ed639e86da377cf54cb4473d9fafe180f0dbe40718"
+    },
+    "processed/market_snapshots.csv": {
+      "size_bytes": 451,
+      "sha256": "f723905703e84f3fcc89e88d84e8217b736540b8c56a266d0e523feed6d41d81"
+    },
+    "processed/nsio_benchmark_5000.csv": {
+      "size_bytes": 3501839,
+      "sha256": "6a357310911cd5e2b841f32aca86fed883e0cda67fb4d7f6ec6e8061b80cad11"
+    },
+    "processed/rail_capabilities.csv": {
+      "size_bytes": 789,
+      "sha256": "8dbb57aa1f024a5ea5d59676ef2263235b85ee4e52c180cfd0369753447d4706"
+    },
+    "processed/test.csv": {
+      "size_bytes": 522746,
+      "sha256": "ac5cc82135ab0143106d0ccd781cd3753950ab03b826533e464082400e318edf"
+    },
+    "processed/train.csv": {
+      "size_bytes": 2428773,
+      "sha256": "f830e3d23bcbfe17e8802833d956906d1c621cf6fb293ef5dcdd33f46d89419d"
+    },
+    "processed/validation.csv": {
+      "size_bytes": 519362,
+      "sha256": "b5c62b0a3c2ff14dc618b29a1811d498cef69097178c235c9bc79cb57cbb76d5"
+    },
+    "provenance.csv": {
+      "size_bytes": 24080,
+      "sha256": "4ed67f745ae7e903bd702bf6ed522c7f6950a1f3b7d4f0b00c8d79be7d1232e3"
+    },
+    "raw_external/source_observations.csv": {
+      "size_bytes": 2750,
+      "sha256": "18ef32767dc0f2c36c793b40cbe8c0f5af25f2229ab64ecdfce58b54b9bad199"
+    },
+    "references/references.bib": {
+      "size_bytes": 2825,
+      "sha256": "8029fd1dcdfffdb12fb1bfb3216f2f80ca5efde1857d0099fdbd886ff841bb0a"
+    },
+    "source_registry.csv": {
+      "size_bytes": 3219,
+      "sha256": "72ff3635ed7964e10e79928f39306e01d5e02ce49c8ace77c2382ede2108189d"
+    },
+    "validate_release.py.txt": {
+      "size_bytes": 6730,
+      "sha256": "7e4604b3c66db716786157bbcbebe71754dab12a29ef68436b40a5cb43bf84ec"
+    }
+  }
+}
